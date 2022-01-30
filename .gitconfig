@@ -1,0 +1,32 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+  name = Jim Hessin
+  email = jhessin@gmail.com
+[merge]
+  tool = vimdiff
+[mergetool]
+  prompt = false
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $MERGED $REMOTE
+[difftool]
+  prompt = true
+[diff]
+  tool = vimdiff
+[difftool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE
+[alias]
+  ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
+[core]
+  editor = nvim
+  autocrlf = input
+  excludesfile = ~/.config/git/ignore
+[color]
+  pager = no
+  ui = true
+[credential]
+  helper = store
+[pull]
+  rebase = false
+[init]
+  defaultBranch = master

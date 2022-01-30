@@ -1,0 +1,65 @@
+# Ignore everything except...
+/*
+
+# DOTFILES!
+!.*
+
+# ignore .directories
+.*/
+
+# ignore credentials
+.*credentials
+
+# Don't ignore completion files
+!*.completion
+
+# ignore .taskrc
+.taskrc
+
+# ignore vim's log files
+.nviminfo
+.vim-bookmarks
+.viminfo
+
+# ignore yarn log files
+.yarnrc*
+
+# Ignore zsh files
+.zcompdump*
+.zsh_history
+.Xauthority
+.bash_history
+.fehbg
+.synergy.conf
+.wget-hsts
+.xsession-errors**
+.coc-project
+.screeps-history
+.pulse-cookie
+.irb-history
+.sudo_as_admin_successful
+.node_repl_history
+
+# ignore mongodb files
+.dbshell
+
+# ignore various history files
+.python_history
+.restorepath
+.tig_history
+.msmtprc
+.offlineimaprc
+!.sup
+.v8flags*
+.*history*
+.nix-profile
+.steampath
+.nix-profile
+
+.emulator_console_auth_token
+.flutter
+.xdm-global-lock
+.DS_Store
+.*.zwc
+.*.zwc.old
+.lesshst
