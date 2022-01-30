@@ -6,6 +6,7 @@ Import-Module cd-extras
 # Save MYVIMRC so I can quickly refer to it later
 $MYVIMRC = "C:\Users\jhess\AppData\Local\nvim\init.vim"
 # Save the neovim config directory
+# This is where the system wide vimrc is.
 $VIM = "C:\tools\neovim\Neovim\share\nvim\runtime"
 
 # Set up the Prompt
@@ -43,4 +44,8 @@ function github() {
 # an easier way to make symbolic links
 function mklink($link, $target) {
 	sudo pwsh -NoExit -Command "New-Item -ItemType SymbolicLink -Path $link -Target $target"
+}
+
+function gitconfig() {
+	nvim $HOME/.gitconfig
 }
