@@ -28,7 +28,7 @@ function which($name) {
 # quickly edit the config file
 function psconfig() {
 	nvim $PROFILE
-	& $PROFILE
+	Import-Module $PROFILE
 }
 
 # quickly edit wez's config file
@@ -48,4 +48,16 @@ function mklink($link, $target) {
 
 function gitconfig() {
 	nvim $HOME/.gitconfig
+}
+
+function vimrc() {
+	cd $HOME\AppData\Local\nvim\
+}
+
+function sysvimrc() {
+	cd $VIM
+}
+
+function git_autocrlf() {
+	git config core.autocrlf true
 }
