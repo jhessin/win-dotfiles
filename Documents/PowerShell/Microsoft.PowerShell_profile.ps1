@@ -28,7 +28,7 @@ function which($name) {
 # quickly edit the config file
 function psconfig() {
 	nvim $PROFILE
-	Import-Module $PROFILE
+	. $PROFILE
 }
 
 # quickly edit wez's config file
@@ -58,6 +58,14 @@ function sysvimrc() {
 	cd $VIM
 }
 
+function psrc() {
+	cd $HOME/Documents/PowerShell/
+}
+
 function git_autocrlf() {
 	git config core.autocrlf true
+}
+
+function vimconfig() {
+	vim $MYVIMRC
 }
