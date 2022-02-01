@@ -14,7 +14,20 @@ $Env:VIM = "C:/tools/neovim/Neovim/share/nvim/runtime"
 Set-PoshPrompt -Theme powerline
 
 # Use vim style readline options
-Set-PSReadlineOption -EditMode vi -BellStyle Visual -ViModeIndicator Cursor
+$OnViModeChange = [scriptblock]{
+    if ($args[0] -eq 'Command') {
+        # Set the cursor to a blinking block.
+        Write-Host -NoNewLine "`e[1 q"
+    }
+    else {
+        # Set the cursor to a blinking line.
+        Write-Host -NoNewLine "`e[5 q"
+    }
+}
+
+Set-PsReadLineOption -EditMode Vi
+Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $OnViModeChange
+# Set-PSReadlineOption -EditMode vi -BellStyle Visual -ViModeIndicator Cursor
 
 # Set up some aliases for vim
 Set-Alias vim nvim
