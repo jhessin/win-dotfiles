@@ -69,3 +69,16 @@ function git-autocrlf() {
 function vimconfig() {
 	vim $MYVIMRC
 }
+
+function syncall() {
+	cd $HOME
+	git pull
+	gitui
+	git push
+	cd $HOME/AppData
+	git pull
+	gitui
+	git push
+	github
+	echo "TODO: Traverse the Projects directory"
+}
