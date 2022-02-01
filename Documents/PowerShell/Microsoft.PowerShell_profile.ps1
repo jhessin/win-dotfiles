@@ -4,10 +4,11 @@ Import-Module oh-my-posh
 Import-Module cd-extras
 
 # Save MYVIMRC so I can quickly refer to it later
-$MYVIMRC = "C:\Users\jhess\AppData\Local\nvim\init.vim"
+$Env:VIMRC = "C:/Users/jhess/AppData/Local/nvim"
+$Env:MYVIMRC = "$Env:VIMRC/init.vim"
 # Save the neovim config directory
 # This is where the system wide vimrc is.
-$VIM = "C:\tools\neovim\Neovim\share\nvim\runtime"
+$Env:VIM = "C:/tools/neovim/Neovim/share/nvim/runtime"
 
 # Set up the Prompt
 Set-PoshPrompt -Theme powerline
@@ -33,7 +34,7 @@ function psconfig() {
 
 # quickly edit wez's config file
 function wezconfig() {
-	nvim 'C:\Program Files\WezTerm\wezterm.lua'
+	nvim 'C:/Program Files/WezTerm/wezterm.lua'
 }
 
 # Go to my github projects folder
@@ -51,11 +52,11 @@ function gitconfig() {
 }
 
 function vimrc() {
-	cd $HOME\AppData\Local\nvim\
+	cd $HOME/AppData/Local/nvim/
 }
 
 function sysvimrc() {
-	cd $VIM
+	cd $Env:VIM
 }
 
 function psrc() {
@@ -67,7 +68,7 @@ function git-autocrlf() {
 }
 
 function vimconfig() {
-	vim $MYVIMRC
+	vim $Env:MYVIMRC
 }
 
 function syncall() {
