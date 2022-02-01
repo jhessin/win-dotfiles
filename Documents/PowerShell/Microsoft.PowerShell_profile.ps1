@@ -62,7 +62,7 @@ function psrc() {
 	cd $HOME/Documents/PowerShell/
 }
 
-function git_autocrlf() {
+function git-autocrlf() {
 	git config core.autocrlf true
 }
 
