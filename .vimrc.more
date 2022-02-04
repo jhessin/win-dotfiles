@@ -1,6 +1,14 @@
 " No compatibility – necessary for mappings to work.
 set nocompatible
 
+" Leaders {{{
+" Use space as the leader key
+let mapleader = " "
+
+" ',' will be the localleader
+let maplocalleader = ","
+"}}}
+
 set mouse=a
 
 " Status line
@@ -19,10 +27,16 @@ syntax enable
 " set guioptions=aiMr
 
 " Key bindings.
-nmap q :q!<CR>
-nmap <Up> <C-Y>
-nmap <Down> <C-E>
+nnoremap <silent><leader>ev :vs ~/.vimrc.more<cr>
+
+nnoremap q :q!<CR>
+nnoremap <Up> <C-Y>
+nnoremap K <C-Y>
+nnoremap J <C-E>
 
 " To type the following line, type *two* C-V's followed by two spaces. This
 " is how you map the spacebar.
-nmap <space> <C-F><C-G>
+" (This doesn't work with space as the leader)
+" nmap <space> <C-F><C-G>
+
+" vim:fdm=marker:fdl=0

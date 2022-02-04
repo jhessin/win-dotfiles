@@ -8,6 +8,16 @@ $Env:VIMRC = "C:/Users/jhess/AppData/Local/nvim"
 $Env:MYVIMRC = "$Env:VIMRC/init.vim"
 $Env:PAGER = "nvim -u ~/.vimrc.more -"
 
+# Save the paths to my repos for future use
+$repos = @(
+    '~',
+    '~/AppData/Local/nvim',
+    '~/AppData/Roaming/gitui',
+    '~/AppData/Roaming/Vifm'
+    )
+
+$SourceRepos = ls ~/source/repos
+
 # Function vimpager {
 #   [CmdletBinding()]
 #     Param(
@@ -66,7 +76,7 @@ function wezconfig() {
 
 # Go to my github projects folder
 function github() {
-  cd $HOME/Projects
+  cd $HOME/source/repos
 }
 
 # an easier way to make symbolic links
@@ -96,17 +106,23 @@ function git-autocrlf() {
 
 function vimconfig() {
   vim $Env:MYVIMRC
+  nvim +CocInstall +PlugClean! +PlugInstall +UpdateRemotePlugins +qall
 }
 
 function syncall() {
-  cd $HOME
-  git pull
-  gitui
-  git push
-  cd $HOME/AppData
-  git pull
-  gitui
-  git push
-  github
-  echo "TODO: Traverse the Projects directory"
+  foreach ( $dir in $repos ) {
+    pushd $dir
+    git pull
+    gitui
+    git push
+    popd
+  }
+
+  foreach ( $dir in $SourceRepos ) {
+    pushd $dir
+    git pull
+    gitui
+    git push
+    popd
+  }
 }
