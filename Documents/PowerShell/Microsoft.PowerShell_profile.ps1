@@ -6,10 +6,13 @@ Import-Module cd-extras
 # Save MYVIMRC so I can quickly refer to it later
 $Env:VIMRC = "C:/Users/jhess/AppData/Local/nvim"
 $Env:MYVIMRC = "$Env:VIMRC/init.vim"
+$Env:PAGER = "nvim -u ~/.vimrc.more -"
 # Save the neovim config directory
 # This is where the system wide vimrc is.
-$Env:VIM = "C:/tools/neovim/Neovim/share/nvim/runtime"
+# $Env:VIM = "C:/tools/neovim/Neovim/share/nvim/runtime"
 
+# Set the default editor
+$Env:EDITOR = $Env:VISUAL = 'nvim'
 # Set up the Prompt
 Set-PoshPrompt -Theme powerline
 
