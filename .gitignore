@@ -5,3 +5,5 @@
 # config files added individually
 !.gitignore
 !Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+!.vimrc.more
+!.condarc
