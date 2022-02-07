@@ -13,7 +13,8 @@ $repos = @(
     '~',
     '~/AppData/Local/nvim',
     '~/AppData/Roaming/gitui',
-    '~/AppData/Roaming/Vifm'
+    '~/AppData/Roaming/Vifm',
+    '~/AppData/Roaming/XIVLauncher'
     )
 
 $SourceRepos = ls ~/source/repos
