@@ -106,7 +106,7 @@ function git-autocrlf() {
 
 function vimconfig() {
   vim $Env:MYVIMRC
-  nvim +CocInstall +PlugClean! +PlugInstall +UpdateRemotePlugins +qall
+  nvim +PlugClean! +PlugInstall +UpdateRemotePlugins +qall
 }
 
 function syncall() {
