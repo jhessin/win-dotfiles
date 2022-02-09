@@ -114,7 +114,10 @@ function syncall() {
   foreach ( $dir in $repos ) {
     pushd $dir
     git pull
-    gitui
+    $treeClean = cmd.exe /c 'git status | find /i "working tree clean"'
+    if (! $treeClean) {
+      gitui
+    }
     git push
     popd
   }
@@ -122,7 +125,10 @@ function syncall() {
   foreach ( $dir in $SourceRepos ) {
     pushd $dir
     git pull
-    gitui
+    $treeClean = cmd.exe /c 'git status | find /i "working tree clean"'
+    if (! $treeClean) {
+      gitui
+    }
     git push
     popd
   }
