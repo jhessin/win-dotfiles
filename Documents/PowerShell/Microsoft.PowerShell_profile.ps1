@@ -11,7 +11,7 @@ $Env:PAGER = "nvim -u ~/.vimrc.more -"
 # Save the paths to my repos for future use
 $repos = @(
     '~',
-    '~/scripts',
+    '~/OneDrive/scripts',
     '~/AppData/Local/nvim',
     '~/AppData/Roaming/gitui',
     '~/AppData/Roaming/Vifm',
