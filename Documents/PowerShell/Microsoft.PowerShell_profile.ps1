@@ -81,6 +81,11 @@ function github() {
   cd $HOME/source/repos
 }
 
+# Go to my bitburner code
+function bitburner {
+  cd $HOME/source/repos/bitburner-files
+}
+
 # an easier way to make symbolic links
 function mklink($link, $target) {
   sudo pwsh -NoExit -Command "New-Item -ItemType SymbolicLink -Path $link -Target $target"
