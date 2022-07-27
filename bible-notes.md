@@ -119,3 +119,31 @@ Be the best ambassador for Christ that you can.
 ## Matthew 10
 
 v5 - Sends out the apostles to the Jews.
+
+# 2022-07-26
+
+## 1 Timothy 3
+
+Rules of an overseer.
+
+- Husband of one wife.
+- clearheaded - no drugs/alcohol
+- sensible
+- respectable - modest in appearance
+- given to hospitality - share housing with those in need.
+- skilled in teaching - Only skill required
+- not an excessive drinker
+- not violent
+- reasonable
+- not quarrelsome
+- not a lover of money
+
+## James 3:1
+
+Not many should be teachers.
+
+## 1 Corinthians 7
+
+Celibacy and Marriage
+
+## Titus 1:9
